@@ -24,7 +24,7 @@ from backend import settings
 from graphene_app.schema import schema
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('', admin.site.urls),
     path('graphql/', csrf_exempt(FileUploadGraphQLView.as_view(graphiql=True, schema=schema))),
 ]
 if settings.DEBUG is True:
